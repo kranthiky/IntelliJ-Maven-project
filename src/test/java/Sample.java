@@ -56,6 +56,5 @@ public void setup(){
     public void flushReport(){
         driver.quit();
         extent.flush();
-        System.out.println("Testing done");
     }
 }
