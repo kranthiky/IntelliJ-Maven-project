@@ -49,11 +49,12 @@ public void setup(){
         Thread.sleep(2000);
         Assert.assertTrue(driver.getPageSource().contains("IntelliJ"));
         System.out.println("Google search is successful!");
-        driver.quit();
+
         logger.log(Status.PASS,"Search is successful");
     }
     @AfterTest
     public void flushReport(){
-    extent.flush();
+        driver.quit();
+        extent.flush();
     }
 }
